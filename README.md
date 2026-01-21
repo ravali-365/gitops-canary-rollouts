@@ -38,5 +38,28 @@ NGINX Ingress (Traffic Routing)
 - Kubernetes (Minikube)
 - Argo CD
 - Argo Rollouts
-- NGINX Ingress Contr
+- NGINX Ingress Controller
+- GitHub (GitOps source of truth)
+- Docker
+- Homebrew (MacOS)
 
+## Repository Structure
+gitops-canary-rollouts/
+├── argocd-app-dev.yaml
+├── argocd-app-prod.yaml
+├── environments/
+│ ├── dev/
+│ │ ├── namespace.yaml
+│ │ ├── rollout.yaml
+│ │ ├── service.yaml
+│ │ └── ingress.yaml
+│ └── prod/
+│ ├── namespace.yaml
+│ ├── rollout.yaml
+│ ├── service.yaml
+│ └── ingress.yaml
+└── README.md
+
+Detailed technical documentation is available in the GitHub Wiki:
+
+👉 https://github.com/ravali-365/gitops-canary-rollouts/wiki
