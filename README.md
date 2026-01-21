@@ -1,15 +1,16 @@
-# gitops-canary-rollouts
-Build a multi-environment GitOps setup (dev + prod) using Argo CD and Argo Rollouts with canary deployments and rollback.
+# GitOps Canary Rollouts (Argo CD + Argo Rollouts)
 
-## Step 1 - Cluster Add-ons
-### Commands
-```bash
-minikube addons enable ingress
-kubectl get pods -n ingress-nginx
+## What this project does
+- Two environments: dev + prod
+- GitOps deployment via Argo CD
+- Canary releases via Argo Rollouts
+- Traffic splitting through NGINX Ingress
+- Rollback demo for failed releases
 
-kubectl create namespace argo-rollouts || true
-kubectl apply -n argo-rollouts -f https://raw.githubusercontent.com/argoproj/argo-rollouts/stable/manifests/install.yaml
-kubectl get pods -n argo-rollouts
-
-brew install kubectl-argo-rollouts
-kubectl argo rollouts version
+## Status
+- [ ] Ingress enabled
+- [ ] Argo Rollouts installed
+- [ ] Manifests created (dev + prod)
+- [ ] Argo CD Applications created
+- [ ] Canary rollout tested
+- [ ] Rollback tested
